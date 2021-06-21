@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from locators import LoginPageLocators
+from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
@@ -9,8 +9,9 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        assert "login" in self.browser.current_url, \
-            "Current url is not related to login url"
+        url_substring = "login"
+        assert url_substring in self.browser.current_url, \
+            f"Page's url must contain '{url_substring}' in it"
 
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), \

@@ -1,0 +1,124 @@
+{
+  "uid" : "53e337ab5445ec5c",
+  "name" : "test_guest_cant_see_success_message_after_adding_product_to_basket",
+  "fullName" : "module_5.test_product_page.TestProductPage#test_guest_cant_see_success_message_after_adding_product_to_basket",
+  "historyId" : "73a493c161f5189f89249bf7a7c46bd7",
+  "time" : {
+    "start" : 1624564407681,
+    "stop" : 1624564412124,
+    "duration" : 4443
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+  "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x0000024A9BCA0CD0>, browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c151e1a9e9819db521cfdc317c77b37b\")>\n\n    @pytest.mark.xfail\n    def test_guest_cant_see_success_message_after_adding_product_to_basket(self, browser):\n        page = ProductPage(browser, ProductPage.LINK)\n        page.open()\n        page.add_to_basket()\n>       page.should_not_be_success_message()\n\nmodule_5\\test_product_page.py:29: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x0000024A9BBF02E0>\n\n    def should_not_be_success_message(self):\n>       assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \\\n            \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\nmodule_5\\pages\\product_page.py:28: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1624564405203,
+      "stop" : 1624564407681,
+      "duration" : 2478
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "language",
+    "time" : {
+      "start" : 1624564405202,
+      "stop" : 1624564405202,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+    "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x0000024A9BCA0CD0>, browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c151e1a9e9819db521cfdc317c77b37b\")>\n\n    @pytest.mark.xfail\n    def test_guest_cant_see_success_message_after_adding_product_to_basket(self, browser):\n        page = ProductPage(browser, ProductPage.LINK)\n        page.open()\n        page.add_to_basket()\n>       page.should_not_be_success_message()\n\nmodule_5\\test_product_page.py:29: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x0000024A9BBF02E0>\n\n    def should_not_be_success_message(self):\n>       assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \\\n            \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\nmodule_5\\pages\\product_page.py:28: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "488a0aac11dcf887",
+      "name" : "stdout",
+      "source" : "488a0aac11dcf887.txt",
+      "type" : "text/plain",
+      "size" : 33
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1624564414181,
+      "stop" : 1624564416330,
+      "duration" : 2149
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "parentSuite",
+    "value" : "module_5"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductPage"
+  }, {
+    "name" : "host",
+    "value" : "ANStepan-L-SPB"
+  }, {
+    "name" : "thread",
+    "value" : "11560-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "module_5.test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail" ]
+  },
+  "source" : "53e337ab5445ec5c.json",
+  "parameterValues" : [ ]
+}

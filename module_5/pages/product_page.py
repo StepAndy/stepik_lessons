@@ -3,6 +3,8 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+    LINK = 'http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/'
+
     def get_product_name(self):
         return self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
 

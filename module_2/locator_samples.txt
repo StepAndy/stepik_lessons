@@ -1,5 +1,0 @@
-#first-name
-//input[@name="last-name"]
-.email
-//input[@personal_data="phone"]
-//input[@class="form-control adress"]

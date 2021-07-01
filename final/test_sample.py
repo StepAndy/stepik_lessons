@@ -34,24 +34,18 @@ class TestPersonalTests:
 
         page.check_disabled_account_sign_in_restriction()
 
-
-class Skipped:
-    #    @pytest.fixture()  # use in rereg
-    #    def logout(self):
-    #        page = MainPage(...)
-    #        page.open()
-    #        page.sign_out()
-
-    def test_password_cant_be_changed_on_identical(self):
-        page = AccountPage()
+    @pytest.mark.xfail
+    @pytest.mark.current
+    def test_password_cant_be_changed_on_identical(self, browser, create_user):
+        page = AccountPage(browser, AccountPage.LINK)
         page.open()
-        page.click_change_password()
-        # page.enter_password
-        page.check_password_validation()  # ?
-        # page.enter_password
-        page.check_changing_password_to_identical_is_restricted()
 
-    def test_unavaliable_product_can_be_added_to_product_alerts(self):
+        _, initial_password = create_user
+        page.create_new_password_identical_to_old(initial_password)
+
+        page.check_new_passwrod_differs_from_old()
+
+    def test_unavaliable_product_can_be_added_to_product_alerts(self, browser):
         page = ProductPage(browser, "unavailable_product_link")  # url
         page.click_notify_me()  # inside should_be_no_added_to_basket_button() ... + alert success
         page.go_to_ap()

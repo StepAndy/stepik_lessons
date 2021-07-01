@@ -11,6 +11,9 @@ class AccountPageLocators:
     DELETE_PROFILE = (By.CSS_SELECTOR, "#delete_profile")
     DELETE_PROFILE_PASSWORD = (By.CSS_SELECTOR, "#id_password")
     CONFIRM_DELETE = (By.CSS_SELECTOR, ".btn.btn-lg.btn-danger")
+    CHANGE_PASSWORD = (By.CSS_SELECTOR, ".btn.btn-primary:nth-of-type(1)")
+    CONFIRM_CHANGE_PASSWORD = (By.CSS_SELECTOR, ".btn.btn-lg.btn-primary")
+    PASSWORD_UPDATED = (By.CSS_SELECTOR, ".alert-success")
 
 
 class BasketPageLocators:
